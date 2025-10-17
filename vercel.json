@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "projects": [
+    {
+      "name": "ee-2048-frontend",
+      "rootDirectory": "frontend",
+      "framework": "nextjs"
+    },
+    {
+      "name": "ee-2048-backend",
+      "rootDirectory": "backend",
+      "builds": [
+        { "src": "server.js", "use": "@vercel/node" }
+      ],
+      "routes": [
+        { "src": "/api/(.*)", "dest": "/server.js" }
+      ]
+    }
+  ]
+}
+
